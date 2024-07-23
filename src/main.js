@@ -23,15 +23,12 @@ const fetchImages = async query => {
         safesearch: true,
       },
     });
-
-    if (response.status !== 200) {
-      console.error('Błąd: Nieudane żądanie', response.status);
-      return [];
-    }
-
     return response.data.hits;
   } catch (error) {
-    console.error('Something went wrong. Please try again', error);
+    iziToast.error({
+      title: 'Error',
+      message: 'Something went wrong. Please try again!',
+    });
     return [];
   } finally {
     loader.classList.add('hidden');
