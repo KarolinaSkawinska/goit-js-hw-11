@@ -7,8 +7,8 @@ import 'simplelightbox/dist/simple-lightbox.min.css';
 const API_KEY = 'YOUR_PIXABAY_API_KEY';
 const BASE_URL = 'https://pixabay.com/api/';
 
-const form = document.querySelector('search-form');
-const gallery = document.querySelector('gallery');
+const form = document.querySelector('.search-form');
+const gallery = document.querySelector('.gallery');
 const loader = document.getElementById('loader');
 
 const fetchImages = async query => {
@@ -16,7 +16,7 @@ const fetchImages = async query => {
   try {
     const response = await axios.get(BASE_URL, {
       params: {
-        key: 45062704-33fd3c82d061d20576d8c3095,
+        key: '4506270433fd3c82d061d20576d8c3095',
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
