@@ -4,7 +4,6 @@ import 'izitoast/dist/css/iziToast.min.css';
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 
-const API_KEY = 'YOUR_PIXABAY_API_KEY';
 const BASE_URL = 'https://pixabay.com/api/';
 
 const form = document.querySelector('.search-form');
@@ -16,7 +15,7 @@ const fetchImages = async query => {
   try {
     const response = await axios.get(BASE_URL, {
       params: {
-        key: '4506270433fd3c82d061d20576d8c3095',
+        key: '45062704-33fd3c82d061d20576d8c3095',
         q: query,
         image_type: 'photo',
         orientation: 'horizontal',
